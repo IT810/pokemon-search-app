@@ -1,10 +1,10 @@
 <template>
     <div class="w-full flex justify-center">
-        <input type="text" placeholder="Enter pokemon here" class="mt-10 p-2 border-blue-500 border-2 w-80" v-model="text" />
+        <input type="text" placeholder="Enter pokemon here" class="mt-10 p-2 border-blue-500 border-2 w-80 rounded-md" v-model="text" />
     </div>
-    <div class="mt-10 p-4 flex flex-wrap justify-center">
+    <div class="my-10 p-4 flex flex-wrap justify-center">
         <div v-if="filteredPokemons.length <= 0">No data</div>
-        <div class="ml-4 text-2x text-blue-500" v-for="(pokemon, idx) in filteredPokemons" :key="idx">
+        <div class="m-2 text-2x text-blue-500 p-3 bg-green-300 rounded-md" v-for="(pokemon, idx) in filteredPokemons" :key="idx">
             <router-link :to="`/about/${urlIdLookUp[pokemon.name]}`">{{ pokemon.name }}</router-link>
         </div>
     </div>
