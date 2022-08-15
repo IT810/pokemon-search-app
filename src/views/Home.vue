@@ -4,7 +4,7 @@
     </div>
     <div class="my-10 p-4 flex flex-wrap justify-center">
         <div v-if="filteredPokemons.length <= 0">No data</div>
-        <div class="m-2 text-2x text-blue-500 p-3 bg-green-300 rounded-md" v-for="(pokemon, idx) in filteredPokemons" :key="idx">
+        <div class="m-2 text-2x text-blue-500 p-3 bg-green-300 rounded-md hover:bg-sky-700" v-for="(pokemon, idx) in filteredPokemons" :key="idx">
             <router-link :to="`/about/${urlIdLookUp[pokemon.name]}`">{{ pokemon.name }}</router-link>
         </div>
     </div>
